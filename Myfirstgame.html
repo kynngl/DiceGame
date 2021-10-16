@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <div class="center">
+        <img id="img1" class="img"
+            src="https://sportsbet.imgix.net/news/1A%20Bitcasino/memes-1.jpg?auto=compress&auto=format&w=320?&w=500">
+    </div>
+    <div class="center">
+        <h1 id="h1Title">Chào mừng đến với Lucky Dice Catsino</h1>
+    </div>
+    <link rel="stylesheet" href="Myfirstgame.css">
+</head>
+
+<body>
+    <div class="center">
+        <img id="img2" src="https://cdn2.iconfinder.com/data/icons/activity-5/50/1F3B2-game-dice-512.png"
+            style="width: 100px;">
+
+
+        <div class="btn">
+            <button class="button" id="btn" onclick="getRandomNumber()">Đổ Xúc Xắc</button>
+        </div>
+        <div class="form" id="form">
+            <h2 id="h2Title"> Chúc mừng bạn. Hãy chơi ván nữa</h2>
+        </div>
+    </div>
+    <script>
+        // hiển thị ra console//
+        var gNewDice;
+        onPageLoading();
+        function onPageLoading() {
+            var h1TitleElement = document.getElementById("h1Title");
+            var h2TitleElement = document.getElementById("h2Title");
+            var Img1Element = document.getElementById("img1");
+            var Img2Element = document.getElementById("img2");
+            var btnElement = document.getElementById("btn");
+
+            console.log(h1TitleElement.id);
+            console.log(h1TitleElement.innerHTML);
+
+            console.log(h2TitleElement.id);
+            console.log(h2TitleElement.innerHTML);
+
+            console.log(Img1Element.id);
+            console.log(Img1Element.src);
+
+            console.log(Img2Element.id);
+            console.log(Img2Element.src);
+
+            console.log(btnElement.id);
+            console.log(btnElement.innerHTML);
+        }
+        // hàm function nút tung xúc xắc
+
+        function getRandomNumber() {
+            console.log("Tung Xúc Xắc");
+            var numberDice = Math.floor((Math.random() * 6) + 1);
+
+            console.log(numberDice);
+            gNewDice = numberDice;
+            changeDiceImage(gNewDice);
+            changeMessage(gNewDice);
+        }
+
+        function changeDiceImage(paramDice) {
+            if (gNewDice == 1) {
+                document.getElementById("img2").src = "https://cdn2.iconfinder.com/data/icons/dice-roll/100/dice_1-512.png"
+            }
+            else if (gNewDice == 2) {
+                document.getElementById("img2").src = "https://cdn2.iconfinder.com/data/icons/dice-roll/100/dice_2-512.png"
+            }
+            else if (gNewDice == 3) {
+                document.getElementById("img2").src = "https://cdn2.iconfinder.com/data/icons/dice-roll/100/dice_3-512.png"
+            }
+            else if (gNewDice == 4) {
+                document.getElementById("img2").src = "https://cdn2.iconfinder.com/data/icons/dice-roll/100/dice_4-512.png"
+            }
+            else if (gNewDice == 5) {
+                document.getElementById("img2").src = "https://cdn2.iconfinder.com/data/icons/dice-roll/100/dice_5-512.png"
+            }
+            else if (gNewDice == 6) {
+                document.getElementById("img2").src = "https://cdn2.iconfinder.com/data/icons/dice-roll/100/dice_6-512.png"
+            }
+        }
+
+
+        function changeMessage(paramDice) {
+            if (gNewDice == 1) {
+                document.getElementById("form").style.display = "block "
+                document.getElementById("form").innerHTML = "Bạn gà quá hãy cố gắng lần sau"
+            }
+            else if (gNewDice == 2) {
+                document.getElementById("form").style.display = "block "
+                document.getElementById("form").innerHTML = "Bạn gà quá hãy cố gắng lần sau"
+            }
+            else if (gNewDice == 3) {
+                document.getElementById("form").style.display = "block "
+                document.getElementById("form").innerHTML = "Bạn gà quá hãy cố gắng lần sau"
+            }
+
+            else if (gNewDice == 4) {
+                document.getElementById("form").style.display = "block "
+                document.getElementById("form").innerHTML = "Hôm nay có vẻ là ngày may mắn của bạn "
+            }
+            else if (gNewDice == 5) {
+                document.getElementById("form").style.display = "block "
+                document.getElementById("form").innerHTML = "Hôm nay có vẻ là ngày may mắn của bạn "
+            }
+            else if (gNewDice == 6) {
+                document.getElementById("form").style.display = "block "
+                document.getElementById("form").innerHTML = "Hôm nay có vẻ là ngày may mắn của bạn "
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
